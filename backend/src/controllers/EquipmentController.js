@@ -17,6 +17,8 @@ const cleanedDate = last_cleaned
   ? new Date(lastCleaned).toISOString().slice(0, 19).replace('T', ' ')
   : null;
 
+
+  
   if (!name || !type || !status) {
     return res.status(400).json({ message: 'Missing fields' })
   }

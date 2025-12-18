@@ -18,11 +18,12 @@ const cleanedDate = last_cleaned
   : null;
 
 
-  
+
   if (!name || !type || !status) {
     return res.status(400).json({ message: 'Missing fields' })
   }
 
+  
   try {
     const [result] = await db.query(
       `INSERT INTO equipment (name, type, status, last_cleaned)
